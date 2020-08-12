@@ -5,8 +5,11 @@
     <attr name="stroke_width" format="integer|dimension" />
 
     <declare-styleable name="RoundLayoutAttr">
+        <!--圆角弧度-->
         <attr name="round_corner" />
+        <!--边框颜色-->
         <attr name="stroke_color" />
+        <!--边框宽度-->
         <attr name="stroke_width" />
     </declare-styleable>
 </resources>
