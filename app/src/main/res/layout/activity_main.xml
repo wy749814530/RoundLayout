@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.wang.roundlayout.RoundLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:apps="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <com.wang.roundlayout.RoundLinearLayout
+        android:id="@+id/r_linear_lay"
+        android:layout_width="240dp"
+        android:layout_height="150dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_margin="20dp"
+        android:foreground="?android:attr/selectableItemBackground"
+        android:onClick="onClickView"
+        apps:round_corner="30dp">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="fitXY"
+            android:src="@mipmap/chemo" />
+    </com.wang.roundlayout.RoundLinearLayout>
+
+    <com.wang.roundlayout.RoundRelativeLayout
+        android:id="@+id/r_relative_lay"
+        android:layout_width="200dp"
+        android:layout_height="280dp"
+        android:layout_gravity="center_horizontal"
+        android:foreground="?android:attr/selectableItemBackground"
+        android:onClick="onClickView"
+        apps:round_corner="50dp"
+        apps:stroke_color="#222222"
+        apps:stroke_width="10dp">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:scaleType="fitXY"
+            android:src="@mipmap/meinv" />
+    </com.wang.roundlayout.RoundRelativeLayout>
+
+    <com.wang.roundlayout.RoundRelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="20dp"
+        android:background="#FFFFFF"
+        android:padding="10dp"
+        apps:round_corner="10dp"
+        apps:stroke_color="#222222"
+        apps:stroke_width="1dp">
+
+
+        <com.wang.roundlayout.RoundLinearLayout
+            android:id="@+id/r_linear_lay_1"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tv_round_corner"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="圆角：" />
+
+            <SeekBar
+                android:id="@+id/seekbar_round_corner"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="20dp"
+                android:max="250" />
+        </com.wang.roundlayout.RoundLinearLayout>
+
+
+        <com.wang.roundlayout.RoundLinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_below="@+id/r_linear_lay_1"
+            android:layout_marginTop="20dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tv_stroke_width"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="边框：" />
+
+            <SeekBar
+                android:id="@+id/seekbar_stroke_width"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="20dp"
+                android:max="10" />
+        </com.wang.roundlayout.RoundLinearLayout>
+
+    </com.wang.roundlayout.RoundRelativeLayout>
+</com.wang.roundlayout.RoundLinearLayout>
